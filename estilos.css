@@ -1,161 +1,158 @@
-/* Estilos generales para la página */
+/* estilos.css */
+
+/* Fondo general */
 body {
+  background-color: #FFD3ED; /* fondo pastel rosado */
   font-family: Arial, sans-serif;
-  background-color: #FFD3ED;
+  margin: 20px;
   color: #333;
-  margin: 0;
-  padding: 0;
 }
 
-h1, h2, h3 {
-  color: #E50087;
+/* Título principal */
+h1 {
+  color: #E50087; /* color fucsia fuerte para títulos */
   text-align: center;
+  margin-bottom: 30px;
 }
 
-/* Contenedor principal */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Estilos para el contenedor de los ramos */
-.ramos-container {
+/* Contenedor de la malla */
+.contenedor-malla {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 40px;
 }
 
-/* Estilo de cada ramo */
-.ramo {
-  background-color: #FF69D1;
-  color: white;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  width: 150px;
-  transition: transform 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.ramo:hover {
-  transform: scale(1.05);
-}
-
-.ramo.disabled {
-  background-color: #E0E0E0; /* Color para ramos bloqueados */
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.ramo.enabled {
-  background-color: #69E3FF; /* Color para ramos desbloqueados */
-}
-
-.ramo.clicked {
-  background-color: #9B69FF; /* Color para ramos ya clickeados */
-}
-
-/* Estilos para la sección de información */
-#info-ramos {
-  margin-top: 40px;
-  padding: 20px;
+/* Cada semestre como una sección */
+section {
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  display: none;
-  max-width: 600px;
-  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(229, 0, 135, 0.3);
+  padding: 20px;
+  width: 280px;
+}
+
+/* Título semestre */
+section > h2 {
+  color: #E50087;
   text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Botones de los ramos */
+button.ramo {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: #000;
+}
+
+/* Estado inicial - bloqueados */
+button.ramo:disabled {
+  background-color: #ff69d1; /* color rosa fuerte para ramos bloqueados */
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Estado activo - desbloqueados */
+button.ramo:not(:disabled) {
+  background-color: #ffed69; /* amarillo pastel para desbloqueados semestre 1 y 2 (puedes ajustar según ramo) */
   color: #333;
 }
 
-/* Estilo de los botones de cada ramo */
-.ramo-button {
-  background-color: #E50087;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+/* Hover para botones desbloqueados */
+button.ramo:not(:disabled):hover {
+  background-color: #bdff9d; /* verde pastel al pasar mouse */
+  color: #000;
 }
 
-.ramo-button:hover {
-  background-color: #9B69FF;
+/* Colores específicos por grupos de ramos */
+
+/* Internados (semestre 11 a 14) */
+#internadoMed,
+#internadoGine,
+#internadoPedia,
+#internadoCirugia,
+#internadoFamiliar,
+#internadoEsp,
+#internadoOpt {
+  background-color: #69e3ff;
+  color: #000;
+}
+button.ramo:not(:disabled)#internadoMed:hover,
+button.ramo:not(:disabled)#internadoGine:hover,
+button.ramo:not(:disabled)#internadoPedia:hover,
+button.ramo:not(:disabled)#internadoCirugia:hover,
+button.ramo:not(:disabled)#internadoFamiliar:hover,
+button.ramo:not(:disabled)#internadoEsp:hover,
+button.ramo:not(:disabled)#internadoOpt:hover {
+  background-color: #bdff9d;
 }
 
-.ramo-button:disabled {
-  background-color: #E0E0E0;
-  cursor: not-allowed;
+/* Semiología y Clínicas Integradas */
+#semiologia,
+#clinica1,
+#clinica2,
+#clinica3,
+#clinica4,
+#clinica5 {
+  background-color: #9b69ff;
+  color: #fff;
+}
+button.ramo:not(:disabled)#semiologia:hover,
+button.ramo:not(:disabled)#clinica1:hover,
+button.ramo:not(:disabled)#clinica2:hover,
+button.ramo:not(:disabled)#clinica3:hover,
+button.ramo:not(:disabled)#clinica4:hover,
+button.ramo:not(:disabled)#clinica5:hover {
+  background-color: #bdff9d;
+  color: #000;
 }
 
-.ramo-button:enabled {
-  background-color: #69E3FF;
+/* Semestres 1 y 2 */
+#intro,
+#bbm1,
+#quimica,
+#met1,
+#tallerAcad,
+#ingles1,
+#anatomia1,
+#bbm2,
+#infoCom,
+#met2,
+#tallerSaludCom,
+#ingles2 {
+  background-color: #ffed69;
+  color: #333;
+}
+button.ramo:not(:disabled)#intro:hover,
+button.ramo:not(:disabled)#bbm1:hover,
+button.ramo:not(:disabled)#quimica:hover,
+button.ramo:not(:disabled)#met1:hover,
+button.ramo:not(:disabled)#tallerAcad:hover,
+button.ramo:not(:disabled)#ingles1:hover,
+button.ramo:not(:disabled)#anatomia1:hover,
+button.ramo:not(:disabled)#bbm2:hover,
+button.ramo:not(:disabled)#infoCom:hover,
+button.ramo:not(:disabled)#met2:hover,
+button.ramo:not(:disabled)#tallerSaludCom:hover,
+button.ramo:not(:disabled)#ingles2:hover {
+  background-color: #bdff9d;
+  color: #000;
 }
 
-/* Estilo de las secciones de los semestres */
-.semestre {
-  margin-bottom: 40px;
+/* Todos los otros ramos */
+button.ramo:not(:disabled):not(#internadoMed):not(#internadoGine):not(#internadoPedia):not(#internadoCirugia):not(#internadoFamiliar):not(#internadoEsp):not(#internadoOpt):not(#semiologia):not(#clinica1):not(#clinica2):not(#clinica3):not(#clinica4):not(#clinica5):not(#intro):not(#bbm1):not(#quimica):not(#met1):not(#tallerAcad):not(#ingles1):not(#anatomia1):not(#bbm2):not(#infoCom):not(#met2):not(#tallerSaludCom):not(#ingles2) {
+  background-color: #ff69d1;
+  color: #fff;
 }
-
-.semestre h2 {
-  color: #9B69FF;
-  font-size: 1.8rem;
-  text-align: left;
-  margin-top: 40px;
-}
-
-/* Estilos para el diseño de la malla de Medicina */
-.malla-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.malla-header h1 {
-  font-size: 2.5rem;
-  color: #E50087;
-}
-
-.malla-header .info-button {
-  background-color: #69E3FF;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.malla-header .info-button:hover {
-  background-color: #9B69FF;
-}
-
-/* Estilos para los títulos de cada semestre */
-.semestre-title {
-  font-size: 1.5rem;
-  color: #9B69FF;
-  margin-bottom: 20px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .ramos-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .ramo {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  #info-ramos {
-    width: 90%;
-  }
+button.ramo:not(:disabled):not(#internadoMed):not(#internadoGine):not(#internadoPedia):not(#internadoCirugia):not(#internadoFamiliar):not(#internadoEsp):not(#internadoOpt):not(#semiologia):not(#clinica1):not(#clinica2):not(#clinica3):not(#clinica4):not(#clinica5):not(#intro):not(#bbm1):not(#quimica):not(#met1):not(#tallerAcad):not(#ingles1):not(#anatomia1):not(#bbm2):not(#infoCom):not(#met2):not(#tallerSaludCom):not(#ingles2):hover {
+  background-color: #bdff9d;
+  color: #000;
 }
