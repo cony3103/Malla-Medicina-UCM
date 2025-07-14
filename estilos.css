@@ -1,0 +1,79 @@
+/* Fondo general y texto */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFD3ED; /* fondo rosado pastel */
+  color: #333;
+  padding: 20px;
+}
+
+/* Título principal */
+h1 {
+  color: #E50087; /* rosado fuerte */
+  text-align: center;
+}
+
+/* Caja de cada semestre */
+.semestre {
+  background-color: #ffffff;
+  border-left: 5px solid #E50087;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del semestre */
+.semestre h2 {
+  margin-top: 0;
+  color: #E50087;
+}
+
+/* Estilo base de cada ramo */
+.ramo {
+  cursor: pointer;
+  margin-bottom: 5px;
+  color: #000;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover al pasar el mouse */
+.ramo:hover {
+  background-color: #BDFF9D; /* verde pastel */
+  color: #000;
+}
+
+/* Cuadro de información del ramo */
+#info-ramos {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-left: 5px solid #E50087;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+/* 🎯 COLORES PERSONALIZADOS POR TIPO DE RAMO */
+
+/* Internados: celeste */
+.ramo.internado {
+  background-color: #69E3FF;
+}
+
+/* Clínicas y Semiología: violeta */
+.ramo.clinica {
+  background-color: #9B69FF;
+}
+
+/* Semestres 1 y 2: amarillo pastel */
+.ramo.preclinico {
+  background-color: #FFED69;
+}
+
+/* Todos los demás: rosado fuerte */
+.ramo.otro {
+  background-color: #FF69D1;
+}
