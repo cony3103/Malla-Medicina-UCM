@@ -2,137 +2,134 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Malla curricular interactiva de Medicina UCM - Universidad Católica del Maule.">
-  <meta name="author" content="Cony Figueroa">
-  <title>Malla Medicina UCM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Interactiva Medicina UCM</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-  <h1>Malla Curricular - Medicina UCM</h1>
-  <p>
-    Malla interactiva de la carrera de Medicina de la Universidad Católica del Maule (Chile).
-    Haz clic sobre cualquier ramo para ver sus requisitos.
-  </p>
+  <h1>Malla Curricular Medicina UCM - Chile</h1>
 
-  <!-- SEMESTRE 1 -->
-  <div class="semestre">
-    <h2>Semestre 1</h2>
-    <div class="ramo preclinico" onclick="mostrarInfo('intro')">Introducción a la profesión médica</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('bbm1')">Bases Biológicas de la Medicina I</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('quimica')">Química General y Orgánica</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('met1')">Metodología De la Investigación I</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('tallerAcad')">Taller De aprendizaje Académico</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('ingles1')">Inglés I</div>
+  <div class="malla">
+
+    <!-- Semestre 1 -->
+    <section class="semestre" id="semestre1" style="background-color: #FFED69;">
+      <h2>Semestre 1</h2>
+      <div class="ramo desbloqueado" data-id="intro" data-desbloquea="bbm2,semiologia,micro1,farmaco1,patologiaSist" onclick="desbloquear(this)">Introducción a la profesión médica</div>
+      <div class="ramo desbloqueado" data-id="bbm1" data-desbloquea="bbm2" onclick="desbloquear(this)">Bases Biológicas de la Medicina I</div>
+      <div class="ramo desbloqueado" data-id="quimica" onclick="desbloquear(this)">Química General y Orgánica</div>
+      <div class="ramo desbloqueado" data-id="met1" data-desbloquea="met2" onclick="desbloquear(this)">Metodología De la Investigación I</div>
+      <div class="ramo desbloqueado" data-id="tallerAcad" onclick="desbloquear(this)">Taller De aprendizaje Académico</div>
+      <div class="ramo desbloqueado" data-id="ingles1" data-desbloquea="ingles2" onclick="desbloquear(this)">Inglés I</div>
+    </section>
+
+    <!-- Semestre 2 -->
+    <section class="semestre" id="semestre2" style="background-color: #FFED69;">
+      <h2>Semestre 2</h2>
+      <div class="ramo bloqueado" data-id="anatomia1" onclick="desbloquear(this)">Anatomía y embriología I</div>
+      <div class="ramo bloqueado" data-id="bbm2" data-desbloquea="fisiologiaGen" onclick="desbloquear(this)">Bases Biológicas de la Medicina II</div>
+      <div class="ramo bloqueado" data-id="infoCom" onclick="desbloquear(this)">Información y comunicación médica</div>
+      <div class="ramo bloqueado" data-id="met2" data-desbloquea="epidemio" onclick="desbloquear(this)">Metodología De la Investigación II</div>
+      <div class="ramo bloqueado" data-id="tallerSaludCom" onclick="desbloquear(this)">Taller de salud comunitaria</div>
+      <div class="ramo bloqueado" data-id="ingles2" data-desbloquea="ingles3" onclick="desbloquear(this)">Inglés II</div>
+    </section>
+
+    <!-- Semestre 3 -->
+    <section class="semestre" id="semestre3" style="background-color: #FF69D1;">
+      <h2>Semestre 3</h2>
+      <div class="ramo bloqueado" data-id="anatomia2" data-desbloquea="histologia,basesNeuro" onclick="desbloquear(this)">Anatomía y embriología II</div>
+      <div class="ramo bloqueado" data-id="neuroanato" data-desbloquea="basesNeuro" onclick="desbloquear(this)">Neuroanatomía</div>
+      <div class="ramo bloqueado" data-id="fisiologiaGen" data-desbloquea="fisiologiaSist" onclick="desbloquear(this)">Fisiología médica general</div>
+      <div class="ramo bloqueado" data-id="epidemio" onclick="desbloquear(this)">Epidemiología</div>
+      <div class="ramo bloqueado" data-id="tallerProc" onclick="desbloquear(this)">Taller de procedimientos clínicos</div>
+      <div class="ramo bloqueado" data-id="ingles3" onclick="desbloquear(this)">Inglés III</div>
+    </section>
+
+    <!-- Semestre 4 -->
+    <section class="semestre" id="semestre4" style="background-color: #FF69D1;">
+      <h2>Semestre 4</h2>
+      <div class="ramo bloqueado" data-id="histologia" onclick="desbloquear(this)">Histología Médica</div>
+      <div class="ramo bloqueado" data-id="basesNeuro" onclick="desbloquear(this)">Bases Neurales de la adaptación humana</div>
+      <div class="ramo bloqueado" data-id="fisiologiaSist" data-desbloquea="patologiaGen" onclick="desbloquear(this)">Fisiología médica de sistemas</div>
+      <div class="ramo bloqueado" data-id="patologiaGen" data-desbloquea="semiologia,micro1,farmaco1,patologiaSist" onclick="desbloquear(this)">Patología y fisiopatología general</div>
+      <div class="ramo bloqueado" data-id="hitoPreclinica" onclick="desbloquear(this)">Hito evaluativo de integración preclínica</div>
+    </section>
+
+    <!-- Semestre 5 -->
+    <section class="semestre" id="semestre5" style="background-color: #FF69D1;">
+      <h2>Semestre 5</h2>
+      <div class="ramo bloqueado" data-id="semiologia" data-desbloquea="clinica1,tallerClinico" onclick="desbloquear(this)">Semiología</div>
+      <div class="ramo bloqueado" data-id="micro1" data-desbloquea="micro2" onclick="desbloquear(this)">Microbiología I</div>
+      <div class="ramo bloqueado" data-id="farmaco1" data-desbloquea="farmaco2" onclick="desbloquear(this)">Bases farmacológicas de la Medicina I</div>
+      <div class="ramo bloqueado" data-id="patologiaSist" data-desbloquea="clinica1,tallerClinico" onclick="desbloquear(this)">Patología y fisiopatología de sistemas</div>
+    </section>
+
+    <!-- Semestre 6 -->
+    <section class="semestre" id="semestre6" style="background-color: #9B69FF;">
+      <h2>Semestre 6</h2>
+      <div class="ramo bloqueado" data-id="clinica1" data-desbloquea="clinica2" onclick="desbloquear(this)">Clínicas Integradas I</div>
+      <div class="ramo bloqueado" data-id="micro2" onclick="desbloquear(this)">Microbiología II</div>
+      <div class="ramo bloqueado" data-id="farmaco2" onclick="desbloquear(this)">Bases farmacológicas de la Medicina II</div>
+      <div class="ramo bloqueado" data-id="tallerClinico" data-desbloquea="saludPublica" onclick="desbloquear(this)">Taller clínico integrado</div>
+      <div class="ramo desbloqueado" data-id="fe" onclick="desbloquear(this)">Introducción a la fe</div>
+    </section>
+
+    <!-- Semestre 7 -->
+    <section class="semestre" id="semestre7" style="background-color: #9B69FF;">
+      <h2>Semestre 7</h2>
+      <div class="ramo bloqueado" data-id="clinica2" data-desbloquea="clinica3" onclick="desbloquear(this)">Clínicas Integradas II</div>
+      <div class="ramo bloqueado" data-id="psicoMed" onclick="desbloquear(this)">Psicología Médica</div>
+      <div class="ramo bloqueado" data-id="saludPublica" onclick="desbloquear(this)">Salud Pública y Medicina Preventiva</div>
+      <div class="ramo desbloqueado" data-id="medMol" onclick="desbloquear(this)">Medicina Molecular</div>
+      <div class="ramo desbloqueado" data-id="eticaCristiana" onclick="desbloquear(this)">Ética cristiana</div>
+    </section>
+
+    <!-- Semestre 8 -->
+    <section class="semestre" id="semestre8" style="background-color: #9B69FF;">
+      <h2>Semestre 8</h2>
+      <div class="ramo bloqueado" data-id="clinica3" data-desbloquea="clinica4" onclick="desbloquear(this)">Clínicas Integradas III</div>
+      <div class="ramo bloqueado" data-id="psiquiatria" onclick="desbloquear(this)">Salud mental y Psiquiatría</div>
+      <div class="ramo bloqueado" data-id="eticaMed" data-desbloquea="clinica4" onclick="desbloquear(this)">Ética Médica</div>
+      <div class="ramo desbloqueado" data-id="cert1" onclick="desbloquear(this)">Certificación I</div>
+    </section>
+
+    <!-- Semestre 9 -->
+    <section class="semestre" id="semestre9" style="background-color: #9B69FF;">
+      <h2>Semestre 9</h2>
+      <div class="ramo bloqueado" data-id="clinica4" data-desbloquea="clinica5" onclick="desbloquear(this)">Clínicas Integradas IV</div>
+      <div class="ramo bloqueado" data-id="obstetricia" onclick="desbloquear(this)">Obstetricia y Ginecología</div>
+      <div class="ramo bloqueado" data-id="legal" onclick="desbloquear(this)">Medicina Legal</div>
+      <div class="ramo desbloqueado" data-id="cert2" onclick="desbloquear(this)">Certificación II</div>
+    </section>
+
+    <!-- Semestre 10 -->
+    <section class="semestre" id="semestre10" style="background-color: #9B69FF;">
+      <h2>Semestre 10</h2>
+      <div class="ramo bloqueado" data-id="clinica5" onclick="desbloquear(this)">Clínicas Integradas V</div>
+      <div class="ramo bloqueado" data-id="pediatria" onclick="desbloquear(this)">Pediatría y cirugía infantil</div>
+      <div class="ramo bloqueado" data-id="hitoClinica" onclick="desbloquear(this)">Hito evaluativo de integración clínica</div>
+      <div class="ramo desbloqueado" data-id="cert3" onclick="desbloquear(this)">Certificación III</div>
+    </section>
+
+    <!-- Semestre 11 y 12 -->
+    <section class="semestre" id="semestre11y12" style="background-color: #69E3FF;">
+      <h2>Semestres 11 y 12</h2>
+      <div class="ramo bloqueado" data-id="internadoMed" onclick="desbloquear(this)">Internado de Medicina interna</div>
+      <div class="ramo bloqueado" data-id="internadoGine" onclick="desbloquear(this)">Internado de Obstetricia y Ginecología</div>
+      <div class="ramo bloqueado" data-id="internadoPedia" onclick="desbloquear(this)">Internado de Pediatría</div>
+      <div class="ramo bloqueado" data-id="internadoCirugia" onclick="desbloquear(this)">Internado de Cirugía</div>
+    </section>
+
+    <!-- Semestre 13 y 14 -->
+    <section class="semestre" id="semestre13y14" style="background-color: #69E3FF;">
+      <h2>Semestres 13 y 14</h2>
+      <div class="ramo bloqueado" data-id="internadoFamiliar" onclick="desbloquear(this)">Internado de salud familiar</div>
+      <div class="ramo bloqueado" data-id="internadoEsp" onclick="desbloquear(this)">Internado de especialidades</div>
+      <div class="ramo bloqueado" data-id="internadoOpt" onclick="desbloquear(this)">Internado optativo</div>
+    </section>
+
   </div>
 
-  <!-- SEMESTRE 2 -->
-  <div class="semestre">
-    <h2>Semestre 2</h2>
-    <div class="ramo preclinico" onclick="mostrarInfo('anatomia1')">Anatomía y embriología I</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('bbm2')">Bases Biológicas de la Medicina II</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('infoCom')">Información y comunicación médica</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('met2')">Metodología De la Investigación II</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('tallerSaludCom')">Taller de salud comunitaria</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('ingles2')">Inglés II</div>
-  </div>
-
-  <!-- SEMESTRE 3 -->
-  <div class="semestre">
-    <h2>Semestre 3</h2>
-    <div class="ramo otro" onclick="mostrarInfo('anatomia2')">Anatomía y embriología II</div>
-    <div class="ramo otro" onclick="mostrarInfo('neuroanato')">Neuroanatomía</div>
-    <div class="ramo otro" onclick="mostrarInfo('fisiologiaGen')">Fisiología médica general</div>
-    <div class="ramo otro" onclick="mostrarInfo('epidemio')">Epidemiología</div>
-    <div class="ramo otro" onclick="mostrarInfo('tallerProc')">Taller de procedimientos clínicos</div>
-    <div class="ramo otro" onclick="mostrarInfo('ingles3')">Inglés III</div>
-  </div>
-
-  <!-- SEMESTRE 4 -->
-  <div class="semestre">
-    <h2>Semestre 4</h2>
-    <div class="ramo otro" onclick="mostrarInfo('histologia')">Histología Médica</div>
-    <div class="ramo otro" onclick="mostrarInfo('basesNeuro')">Bases Neurales de la adaptación humana</div>
-    <div class="ramo otro" onclick="mostrarInfo('fisiologiaSist')">Fisiología médica de sistemas</div>
-    <div class="ramo otro" onclick="mostrarInfo('patologiaGen')">Patología y fisiopatología general</div>
-    <div class="ramo otro" onclick="mostrarInfo('hitoPreclinica')">Hito evaluativo de integración preclínica</div>
-  </div>
-
-  <!-- SEMESTRE 5 -->
-  <div class="semestre">
-    <h2>Semestre 5</h2>
-    <div class="ramo otro" onclick="mostrarInfo('semiologia')">Semiología</div>
-    <div class="ramo otro" onclick="mostrarInfo('micro1')">Microbiología I</div>
-    <div class="ramo otro" onclick="mostrarInfo('farmaco1')">Bases farmacológicas de la Medicina I</div>
-    <div class="ramo otro" onclick="mostrarInfo('patologiaSist')">Patología y fisiopatología de sistemas</div>
-  </div>
-
-  <!-- SEMESTRE 6 -->
-  <div class="semestre">
-    <h2>Semestre 6</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinica1')">Clínicas Integradas I</div>
-    <div class="ramo otro" onclick="mostrarInfo('micro2')">Microbiología II</div>
-    <div class="ramo otro" onclick="mostrarInfo('farmaco2')">Bases farmacológicas de la Medicina II</div>
-    <div class="ramo otro" onclick="mostrarInfo('tallerClinico')">Taller clínico integrado</div>
-    <div class="ramo otro" onclick="mostrarInfo('fe')">Introducción a la fe</div>
-  </div>
-
-  <!-- SEMESTRE 7 -->
-  <div class="semestre">
-    <h2>Semestre 7</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinica2')">Clínicas Integradas II</div>
-    <div class="ramo otro" onclick="mostrarInfo('psicoMed')">Psicología Médica</div>
-    <div class="ramo otro" onclick="mostrarInfo('saludPublica')">Salud Pública y Medicina Preventiva</div>
-    <div class="ramo otro" onclick="mostrarInfo('medMol')">Medicina Molecular</div>
-    <div class="ramo otro" onclick="mostrarInfo('eticaCristiana')">Ética Cristiana</div>
-  </div>
-
-  <!-- SEMESTRE 8 -->
-  <div class="semestre">
-    <h2>Semestre 8</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinica3')">Clínicas Integradas III</div>
-    <div class="ramo otro" onclick="mostrarInfo('psiquiatria')">Salud Mental y Psiquiatría</div>
-    <div class="ramo otro" onclick="mostrarInfo('eticaMed')">Ética Médica</div>
-    <div class="ramo otro" onclick="mostrarInfo('cert1')">Certificación I</div>
-  </div>
-
-  <!-- SEMESTRE 9 -->
-  <div class="semestre">
-    <h2>Semestre 9</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinica4')">Clínicas Integradas IV</div>
-    <div class="ramo otro" onclick="mostrarInfo('obstetricia')">Obstetricia y Ginecología</div>
-    <div class="ramo otro" onclick="mostrarInfo('legal')">Medicina Legal</div>
-    <div class="ramo otro" onclick="mostrarInfo('cert2')">Certificación II</div>
-  </div>
-
-  <!-- SEMESTRE 10 -->
-  <div class="semestre">
-    <h2>Semestre 10</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinica5')">Clínicas Integradas V</div>
-    <div class="ramo otro" onclick="mostrarInfo('pediatria')">Pediatría y Cirugía Infantil</div>
-    <div class="ramo otro" onclick="mostrarInfo('hitoClinica')">Hito evaluativo de integración clínica</div>
-    <div class="ramo otro" onclick="mostrarInfo('cert3')">Certificación III</div>
-  </div>
-
-  <!-- SEMESTRES 11 y 12 -->
-  <div class="semestre">
-    <h2>Semestres 11 y 12</h2>
-    <div class="ramo internado" onclick="mostrarInfo('internadoMed')">Internado de Medicina Interna</div>
-    <div class="ramo internado" onclick="mostrarInfo('internadoGine')">Internado de Obstetricia y Ginecología</div>
-    <div class="ramo internado" onclick="mostrarInfo('internadoPedia')">Internado de Pediatría</div>
-    <div class="ramo internado" onclick="mostrarInfo('internadoCirugia')">Internado de Cirugía</div>
-  </div>
-
-  <!-- SEMESTRES 13 y 14 -->
-  <div class="semestre">
-    <h2>Semestres 13 y 14</h2>
-    <div class="ramo internado" onclick="mostrarInfo('internadoFamiliar')">Internado de Salud Familiar</div>
-    <div class="ramo internado" onclick="mostrarInfo('internadoEsp')">Internado de Especialidades</div>
-    <div class="ramo internado" onclick="mostrarInfo('internadoOpt')">Internado Optativo</div>
-  </div>
-
-  <!-- Caja de info -->
-  <div id="info-ramos" class="info-box"></div>
+  <div id="info-ramos" style="margin-top: 20px; font-weight: bold;"></div>
 
   <script src="script.js"></script>
 </body>
