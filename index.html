@@ -3,135 +3,276 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Malla Curricular Medicina UCM</title>
+  <title>Malla Curricular Interactiva Medicina UCM</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-  <h1>Malla Curricular Medicina UCM - Chile</h1>
-  <div id="malla">
+  <header>
+    <h1>Malla Curricular Interactiva - Medicina UCM</h1>
+  </header>
 
-    <!-- Semestre 1 -->
-    <div class="semestre" id="sem1">
-      <h2>Semestre 1</h2>
-      <button id="intro" onclick="desbloquear('intro')">Introducción a la profesión médica</button>
-      <button id="bbm1" onclick="desbloquear('bbm1')">Bases Biológicas de la Medicina I</button>
-      <button id="quimica" onclick="desbloquear('quimica')">Química General y Orgánica</button>
-      <button id="met1" onclick="desbloquear('met1')">Metodología De la Investigación I</button>
-      <button id="tallerAcad" onclick="desbloquear('tallerAcad')">Taller De aprendizaje Académico</button>
-      <button id="ingles1" onclick="desbloquear('ingles1')">Inglés I</button>
-    </div>
+  <main>
+    <!-- Años y semestres con ramos -->
+    <section class="ano" id="ano-1">
+      <h2>1º Año</h2>
+      <div class="semestre">
+        <h3>Semestre 1</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Introducción a la profesión médica" data-requisitos="">
+            Introducción a la profesión médica
+          </div>
+          <div class="ramo" data-nombre="Bases Biológicas de la Medicina I" data-requisitos="">
+            Bases Biológicas de la Medicina I
+          </div>
+          <div class="ramo" data-nombre="Química General y Orgánica" data-requisitos="">
+            Química General y Orgánica
+          </div>
+          <div class="ramo" data-nombre="Metodología De la Investigación I" data-requisitos="">
+            Metodología De la Investigación I
+          </div>
+          <div class="ramo" data-nombre="Taller De aprendizaje Académico" data-requisitos="">
+            Taller De aprendizaje Académico
+          </div>
+          <div class="ramo" data-nombre="Inglés I" data-requisitos="">
+            Inglés I
+          </div>
+        </div>
+      </div>
+      <div class="semestre">
+        <h3>Semestre 2</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Anatomía y embriología I" data-requisitos="Introducción a la profesión médica,Química General y Orgánica,Taller De aprendizaje Académico">
+            Anatomía y embriología I
+          </div>
+          <div class="ramo" data-nombre="Bases Biológicas de la Medicina II" data-requisitos="Bases Biológicas de la Medicina I">
+            Bases Biológicas de la Medicina II
+          </div>
+          <div class="ramo" data-nombre="Información y comunicación médica" data-requisitos="Introducción a la profesión médica,Química General y Orgánica,Taller De aprendizaje Académico">
+            Información y comunicación médica
+          </div>
+          <div class="ramo" data-nombre="Metodología De la Investigación II" data-requisitos="Metodología De la Investigación I">
+            Metodología De la Investigación II
+          </div>
+          <div class="ramo" data-nombre="Taller de salud comunitaria" data-requisitos="Introducción a la profesión médica,Química General y Orgánica,Taller De aprendizaje Académico">
+            Taller de salud comunitaria
+          </div>
+          <div class="ramo" data-nombre="Inglés II" data-requisitos="Inglés I">
+            Inglés II
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Semestre 2 -->
-    <div class="semestre" id="sem2">
-      <h2>Semestre 2</h2>
-      <button id="anatomia1" onclick="desbloquear('anatomia1')" disabled>Anatomía y embriología I</button>
-      <button id="bbm2" onclick="desbloquear('bbm2')" disabled>Bases Biológicas de la Medicina II</button>
-      <button id="infoCom" onclick="desbloquear('infoCom')" disabled>Información y comunicación médica</button>
-      <button id="met2" onclick="desbloquear('met2')" disabled>Metodología De la Investigación II</button>
-      <button id="tallerSaludCom" onclick="desbloquear('tallerSaludCom')" disabled>Taller de salud comunitaria</button>
-      <button id="ingles2" onclick="desbloquear('ingles2')" disabled>Inglés II</button>
-    </div>
+    <section class="ano" id="ano-2">
+      <h2>2º Año</h2>
+      <div class="semestre">
+        <h3>Semestre 3</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Anatomía y embriología II" data-requisitos="Anatomía y embriología I">
+            Anatomía y embriología II
+          </div>
+          <div class="ramo" data-nombre="Neuroanatomía" data-requisitos="Anatomía y embriología I">
+            Neuroanatomía
+          </div>
+          <div class="ramo" data-nombre="Fisiología médica general" data-requisitos="Anatomía y embriología I,Bases Biológicas de la Medicina II">
+            Fisiología médica general
+          </div>
+          <div class="ramo" data-nombre="Epidemiología" data-requisitos="Metodología De la Investigación II">
+            Epidemiología
+          </div>
+          <div class="ramo" data-nombre="Taller de procedimientos clínicos" data-requisitos="">
+            Taller de procedimientos clínicos
+          </div>
+          <div class="ramo" data-nombre="Inglés III" data-requisitos="Inglés II">
+            Inglés III
+          </div>
+        </div>
+      </div>
+      <div class="semestre">
+        <h3>Semestre 4</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Histología Médica" data-requisitos="Anatomía y embriología II,Neuroanatomía,Fisiología médica general,Patología y fisiopatología general,hito evaluativo de integración preclínica">
+            Histología Médica
+          </div>
+          <div class="ramo" data-nombre="Bases Neurales de la adaptación humana" data-requisitos="Neuroanatomía">
+            Bases Neurales de la adaptación humana
+          </div>
+          <div class="ramo" data-nombre="Fisiología médica de sistemas" data-requisitos="Fisiología médica general">
+            Fisiología médica de sistemas
+          </div>
+          <div class="ramo" data-nombre="Patología y fisiopatología general" data-requisitos="Anatomía y embriología II,Neuroanatomía,Fisiología médica general">
+            Patología y fisiopatología general
+          </div>
+          <div class="ramo" data-nombre="hito evaluativo de integración preclínica" data-requisitos="Anatomía y embriología II,Neuroanatomía,Fisiología médica general,Epidemiología,Taller de procedimientos clínicos,Inglés III">
+            hito evaluativo de integración preclínica
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Semestre 3 -->
-    <div class="semestre" id="sem3">
-      <h2>Semestre 3</h2>
-      <button id="anatomia2" onclick="desbloquear('anatomia2')" disabled>Anatomía y embriología II</button>
-      <button id="neuroanato" onclick="desbloquear('neuroanato')" disabled>Neuroanatomía</button>
-      <button id="fisiologiaGen" onclick="desbloquear('fisiologiaGen')" disabled>Fisiología médica general</button>
-      <button id="epidemio" onclick="desbloquear('epidemio')" disabled>Epidemiología</button>
-      <button id="tallerProc" onclick="desbloquear('tallerProc')" disabled>Taller de procedimientos clínicos</button>
-      <button id="ingles3" onclick="desbloquear('ingles3')" disabled>Inglés III</button>
-    </div>
+    <section class="ano" id="ano-3">
+      <h2>3º Año</h2>
+      <div class="semestre">
+        <h3>Semestre 5</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Semiología" data-requisitos="Histología Médica,Bases Neurales de la adaptación humana,Fisiología médica de sistemas,Patología y fisiopatología general,hito evaluativo de integración preclínica">
+            Semiología
+          </div>
+          <div class="ramo" data-nombre="Microbiología I" data-requisitos="Histología Médica,Bases Neurales de la adaptación humana,Fisiología médica de sistemas,Patología y fisiopatología general,hito evaluativo de integración preclínica">
+            Microbiología I
+          </div>
+          <div class="ramo" data-nombre="Bases farmacológicas de la Medicina I" data-requisitos="Histología Médica,Bases Neurales de la adaptación humana,Fisiología médica de sistemas,Patología y fisiopatología general,hito evaluativo de integración preclínica">
+            Bases farmacológicas de la Medicina I
+          </div>
+          <div class="ramo" data-nombre="Patología y fisiopatología de sistemas" data-requisitos="Histología Médica,Bases Neurales de la adaptación humana,Fisiología médica de sistemas,Patología y fisiopatología general,hito evaluativo de integración preclínica">
+            Patología y fisiopatología de sistemas
+          </div>
+        </div>
+      </div>
+      <div class="semestre">
+        <h3>Semestre 6</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Clinicas Integradas I" data-requisitos="Semiología,Microbiología I,Bases farmacológicas de la Medicina I,Patología y fisiopatología de sistemas">
+            Clinicas Integradas I
+          </div>
+          <div class="ramo" data-nombre="Microbiología II" data-requisitos="Microbiología I">
+            Microbiología II
+          </div>
+          <div class="ramo" data-nombre="Bases farmacológicas de la Medicina II" data-requisitos="Bases farmacológicas de la Medicina I">
+            Bases farmacológicas de la Medicina II
+          </div>
+          <div class="ramo" data-nombre="Taller clinico integrado" data-requisitos="Semiología,Microbiología I,Bases farmacológicas de la Medicina I,Patología y fisiopatología de sistemas">
+            Taller clinico integrado
+          </div>
+          <div class="ramo desbloqueado" data-nombre="Introducción a la fé" data-requisitos="">
+            Introducción a la fé
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Semestre 4 -->
-    <div class="semestre" id="sem4">
-      <h2>Semestre 4</h2>
-      <button id="histologia" onclick="desbloquear('histologia')" disabled>Histología Médica</button>
-      <button id="basesNeuro" onclick="desbloquear('basesNeuro')" disabled>Bases Neurales de la adaptación humana</button>
-      <button id="fisiologiaSist" onclick="desbloquear('fisiologiaSist')" disabled>Fisiología médica de sistemas</button>
-      <button id="patologiaGen" onclick="desbloquear('patologiaGen')" disabled>Patología y fisiopatología general</button>
-      <button id="hitoPreclinica" onclick="desbloquear('hitoPreclinica')" disabled>Hito evaluativo de integración preclínica</button>
-    </div>
+    <section class="ano" id="ano-4">
+      <h2>4º Año</h2>
+      <div class="semestre">
+        <h3>Semestre 7</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Clinicas Integradas II" data-requisitos="Clinicas Integradas I">
+            Clinicas Integradas II
+          </div>
+          <div class="ramo" data-nombre="Psicología Médica" data-requisitos="Clinicas Integradas I">
+            Psicología Médica
+          </div>
+          <div class="ramo" data-nombre="Salud Pública y Medicina Preventiva" data-requisitos="Taller clinico integrado">
+            Salud Pública y Medicina Preventiva
+          </div>
+          <div class="ramo" data-nombre="Medicina Molecular" data-requisitos="Clinicas Integradas I,Bases farmacológicas de la Medicina II,Taller clinico integrado">
+            Medicina Molecular
+          </div>
+          <div class="ramo desbloqueado" data-nombre="Etica cristiana" data-requisitos="">
+            Etica cristiana
+          </div>
+        </div>
+      </div>
+      <div class="semestre">
+        <h3>Semestre 8</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Clinicas Integradas III" data-requisitos="Clinicas Integradas II,Psicología Médica,Etica Médica">
+            Clinicas Integradas III
+          </div>
+          <div class="ramo" data-nombre="Salud mental y Psiquiatría" data-requisitos="Psicología Médica">
+            Salud mental y Psiquiatría
+          </div>
+          <div class="ramo" data-nombre="Etica Médica" data-requisitos="Clinicas Integradas II">
+            Etica Médica
+          </div>
+          <div class="ramo desbloqueado" data-nombre="Certificación I" data-requisitos="">
+            Certificación I
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Semestre 5 -->
-    <div class="semestre" id="sem5">
-      <h2>Semestre 5</h2>
-      <button id="semiologia" onclick="desbloquear('semiologia')" disabled>Semiología</button>
-      <button id="micro1" onclick="desbloquear('micro1')" disabled>Microbiología I</button>
-      <button id="farmaco1" onclick="desbloquear('farmaco1')" disabled>Bases farmacológicas de la Medicina I</button>
-      <button id="patologiaSist" onclick="desbloquear('patologiaSist')" disabled>Patología y fisiopatología de sistemas</button>
-    </div>
+    <section class="ano" id="ano-5">
+      <h2>5º Año</h2>
+      <div class="semestre">
+        <h3>Semestre 9</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Clinicas Integradas IV" data-requisitos="Clinicas Integradas III,Etica Médica">
+            Clinicas Integradas IV
+          </div>
+          <div class="ramo" data-nombre="Obstetricia y Ginecología" data-requisitos="">
+            Obstetricia y Ginecología
+          </div>
+          <div class="ramo" data-nombre="Medicina Legal" data-requisitos="Salud mental y Psiquiatría,Etica Médica">
+            Medicina Legal
+          </div>
+          <div class="ramo desbloqueado" data-nombre="Certificacion II" data-requisitos="">
+            Certificacion II
+          </div>
+        </div>
+      </div>
+      <div class="semestre">
+        <h3>Semestre 10</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Clinicas Integradas V" data-requisitos="Clinicas Integradas IV,Medicina Legal">
+            Clinicas Integradas V
+          </div>
+          <div class="ramo" data-nombre="Pediatría y cirugía infantil" data-requisitos="">
+            Pediatría y cirugía infantil
+          </div>
+          <div class="ramo" data-nombre="Hito evaluativo de integración clínica" data-requisitos="Clinicas Integradas IV,Medicina Legal">
+            Hito evaluativo de integración clínica
+          </div>
+          <div class="ramo desbloqueado" data-nombre="Certificacion III" data-requisitos="">
+            Certificacion III
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Semestre 6 -->
-    <div class="semestre" id="sem6">
-      <h2>Semestre 6</h2>
-      <button id="clinica1" onclick="desbloquear('clinica1')" disabled>Clínicas Integradas I</button>
-      <button id="micro2" onclick="desbloquear('micro2')" disabled>Microbiología II</button>
-      <button id="farmaco2" onclick="desbloquear('farmaco2')" disabled>Bases farmacológicas de la Medicina II</button>
-      <button id="tallerClinico" onclick="desbloquear('tallerClinico')" disabled>Taller clínico integrado</button>
-      <button id="fe" onclick="desbloquear('fe')">Introducción a la fe</button>
-    </div>
+    <section class="ano" id="ano-6">
+      <h2>6º Año</h2>
+      <div class="semestre">
+        <h3>Semestre 11 y 12</h3>
+        <div class="malla">
+          <div class="ramo" data-nombre="Internado de Medicina interna" data-requisitos="Clinicas Integradas V,Pediatría y cirugía infantil,Hito evaluativo de integración clínica">
+            Internado de Medicina interna
+          </div>
+          <div class="ramo" data-nombre="Internado de Obstetricia y Ginecología" data-requisitos="Clinicas Integradas V,Pediatría y cirugía infantil,Hito evaluativo de integración clínica">
+            Internado de Obstetricia y Ginecología
+          </div>
+          <div class="ramo" data-nombre="Internado de Pediatría" data-requisitos="Clinicas Integradas V,Pediatría y cirugía infantil,Hito evaluativo de integración clínica">
+            Internado de Pediatría
+          </div>
+          <div class="ramo" data-nombre="Internado de Cirugía" data-requisitos="Clinicas Integradas V,Pediatría y cirugía infantil,Hito evaluativo de integración clínica">
+            Internado de Cirugía
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Semestre 7 -->
-    <div class="semestre" id="sem7">
-      <h2>Semestre 7</h2>
-      <button id="clinica2" onclick="desbloquear('clinica2')" disabled>Clínicas Integradas II</button>
-      <button id="psicoMed" onclick="desbloquear('psicoMed')" disabled>Psicología Médica</button>
-      <button id="saludPublica" onclick="desbloquear('saludPublica')" disabled>Salud Pública y Medicina Preventiva</button>
-      <button id="medMol" onclick="desbloquear('medMol')" disabled>Medicina Molecular</button>
-      <button id="eticaCristiana" onclick="desbloquear('eticaCristiana')">Ética Cristiana</button>
-    </div>
+    <section class="ano" id="ano-7">
+      <h2>7º Año</h2>
+      <div class="semestre">
+        <h3>Semestre 13 y 14</h3>
+        <div class="malla">
+          <div class="ramo desbloqueado" data-nombre="Internado de salud familiar" data-requisitos="">
+            Internado de salud familiar
+          </div>
+          <div class="ramo desbloqueado" data-nombre="internado de especialidades" data-requisitos="">
+            Internado de especialidades
+          </div>
+          <div class="ramo desbloqueado" data-nombre="internado optativo" data-requisitos="">
+            Internado optativo
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Semestre 8 -->
-    <div class="semestre" id="sem8">
-      <h2>Semestre 8</h2>
-      <button id="clinica3" onclick="desbloquear('clinica3')" disabled>Clínicas Integradas III</button>
-      <button id="psiquiatria" onclick="desbloquear('psiquiatria')" disabled>Salud mental y Psiquiatría</button>
-      <button id="eticaMed" onclick="desbloquear('eticaMed')" disabled>Ética Médica</button>
-      <button id="cert1" onclick="desbloquear('cert1')">Certificación I</button>
-    </div>
-
-    <!-- Semestre 9 -->
-    <div class="semestre" id="sem9">
-      <h2>Semestre 9</h2>
-      <button id="clinica4" onclick="desbloquear('clinica4')" disabled>Clínicas Integradas IV</button>
-      <button id="obstetricia" onclick="desbloquear('obstetricia')" disabled>Obstetricia y Ginecología</button>
-      <button id="legal" onclick="desbloquear('legal')" disabled>Medicina Legal</button>
-      <button id="cert2" onclick="desbloquear('cert2')">Certificación II</button>
-    </div>
-
-    <!-- Semestre 10 -->
-    <div class="semestre" id="sem10">
-      <h2>Semestre 10</h2>
-      <button id="clinica5" onclick="desbloquear('clinica5')" disabled>Clínicas Integradas V</button>
-      <button id="pediatria" onclick="desbloquear('pediatria')" disabled>Pediatría y cirugía infantil</button>
-      <button id="hitoClinica" onclick="desbloquear('hitoClinica')" disabled>Hito evaluativo de integración clínica</button>
-      <button id="cert3" onclick="desbloquear('cert3')">Certificación III</button>
-    </div>
-
-    <!-- Semestre 11 y 12 -->
-    <div class="semestre" id="sem11-12">
-      <h2>Semestres 11 y 12</h2>
-      <button id="internadoMed" onclick="desbloquear('internadoMed')" disabled>Internado de Medicina interna</button>
-      <button id="internadoGine" onclick="desbloquear('internadoGine')" disabled>Internado de Obstetricia y Ginecología</button>
-      <button id="internadoPedia" onclick="desbloquear('internadoPedia')" disabled>Internado de Pediatría</button>
-      <button id="internadoCirugia" onclick="desbloquear('internadoCirugia')" disabled>Internado de Cirugía</button>
-    </div>
-
-    <!-- Semestre 13 y 14 -->
-    <div class="semestre" id="sem13-14">
-      <h2>Semestres 13 y 14</h2>
-      <button id="internadoFamiliar" onclick="desbloquear('internadoFamiliar')" disabled>Internado de salud familiar</button>
-      <button id="internadoEsp" onclick="desbloquear('internadoEsp')" disabled>Internado de especialidades</button>
-      <button id="internadoOpt" onclick="desbloquear('internadoOpt')" disabled>Internado optativo</button>
-    </div>
-
-  </div>
-
-  <div id="info-ramos" class="info-ramos">
-    <h3>Información del ramo seleccionado:</h3>
-    <p id="info-text">Haz click en un ramo desbloqueado para ver más información.</p>
-  </div>
+  <footer>
+    <p>© 2025 Cony Figueroa - Malla Interactiva Medicina UCM</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
