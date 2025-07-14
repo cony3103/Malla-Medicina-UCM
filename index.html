@@ -3,101 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Malla curricular interactiva de Medicina UCM - Universidad Católica del Maule.">
+  <meta name="author" content="Cony Figueroa">
   <title>Malla Medicina UCM</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-  <h1>Malla Curricular Medicina - UCM</h1>
+  <h1>Malla Curricular - Medicina UCM</h1>
+  <p>
+    Malla interactiva de la carrera de Medicina de la Universidad Católica del Maule (Chile).
+    Haz clic sobre cualquier ramo para ver sus requisitos.
+  </p>
 
+  <!-- SEMESTRE 1 -->
   <div class="semestre">
     <h2>Semestre 1</h2>
     <div class="ramo preclinico" onclick="mostrarInfo('intro')">Introducción a la profesión médica</div>
     <div class="ramo preclinico" onclick="mostrarInfo('bbm1')">Bases Biológicas de la Medicina I</div>
     <div class="ramo preclinico" onclick="mostrarInfo('quimica')">Química General y Orgánica</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('met1')">Metodología de la Investigación I</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('tallerAcad')">Taller de Aprendizaje Académico</div>
+    <div class="ramo preclinico" onclick="mostrarInfo('met1')">Metodología De la Investigación I</div>
+    <div class="ramo preclinico" onclick="mostrarInfo('tallerAcad')">Taller De aprendizaje Académico</div>
     <div class="ramo preclinico" onclick="mostrarInfo('ingles1')">Inglés I</div>
   </div>
 
+  <!-- SEMESTRE 2 -->
   <div class="semestre">
     <h2>Semestre 2</h2>
-    <div class="ramo preclinico" onclick="mostrarInfo('anat1')">Anatomía y embriología I</div>
+    <div class="ramo preclinico" onclick="mostrarInfo('anatomia1')">Anatomía y embriología I</div>
     <div class="ramo preclinico" onclick="mostrarInfo('bbm2')">Bases Biológicas de la Medicina II</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('infocom')">Información y comunicación médica</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('met2')">Metodología de la Investigación II</div>
-    <div class="ramo preclinico" onclick="mostrarInfo('saludCom')">Taller de Salud Comunitaria</div>
+    <div class="ramo preclinico" onclick="mostrarInfo('infoCom')">Información y comunicación médica</div>
+    <div class="ramo preclinico" onclick="mostrarInfo('met2')">Metodología De la Investigación II</div>
+    <div class="ramo preclinico" onclick="mostrarInfo('tallerSaludCom')">Taller de salud comunitaria</div>
     <div class="ramo preclinico" onclick="mostrarInfo('ingles2')">Inglés II</div>
   </div>
 
+  <!-- SEMESTRE 3 -->
   <div class="semestre">
     <h2>Semestre 3</h2>
-    <div class="ramo otro" onclick="mostrarInfo('anat2')">Anatomía y embriología II</div>
-    <div class="ramo otro" onclick="mostrarInfo('neuroanat')">Neuroanatomía</div>
-    <div class="ramo otro" onclick="mostrarInfo('fisiog')">Fisiología médica general</div>
+    <div class="ramo otro" onclick="mostrarInfo('anatomia2')">Anatomía y embriología II</div>
+    <div class="ramo otro" onclick="mostrarInfo('neuroanato')">Neuroanatomía</div>
+    <div class="ramo otro" onclick="mostrarInfo('fisiologiaGen')">Fisiología médica general</div>
     <div class="ramo otro" onclick="mostrarInfo('epidemio')">Epidemiología</div>
-    <div class="ramo otro" onclick="mostrarInfo('procClin')">Taller de procedimientos clínicos</div>
+    <div class="ramo otro" onclick="mostrarInfo('tallerProc')">Taller de procedimientos clínicos</div>
     <div class="ramo otro" onclick="mostrarInfo('ingles3')">Inglés III</div>
   </div>
 
+  <!-- SEMESTRE 4 -->
   <div class="semestre">
     <h2>Semestre 4</h2>
-    <div class="ramo otro" onclick="mostrarInfo('histo')">Histología Médica</div>
-    <div class="ramo otro" onclick="mostrarInfo('basesNeurales')">Bases Neurales de la adaptación humana</div>
-    <div class="ramo otro" onclick="mostrarInfo('fisios')">Fisiología médica de sistemas</div>
-    <div class="ramo otro" onclick="mostrarInfo('patofisio')">Patología y fisiopatología general</div>
-    <div class="ramo otro" onclick="mostrarInfo('hitoPreclinico')">Hito evaluativo de integración preclínica</div>
+    <div class="ramo otro" onclick="mostrarInfo('histologia')">Histología Médica</div>
+    <div class="ramo otro" onclick="mostrarInfo('basesNeuro')">Bases Neurales de la adaptación humana</div>
+    <div class="ramo otro" onclick="mostrarInfo('fisiologiaSist')">Fisiología médica de sistemas</div>
+    <div class="ramo otro" onclick="mostrarInfo('patologiaGen')">Patología y fisiopatología general</div>
+    <div class="ramo otro" onclick="mostrarInfo('hitoPreclinica')">Hito evaluativo de integración preclínica</div>
   </div>
 
+  <!-- SEMESTRE 5 -->
   <div class="semestre">
     <h2>Semestre 5</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('semiologia')">Semiología</div>
+    <div class="ramo otro" onclick="mostrarInfo('semiologia')">Semiología</div>
     <div class="ramo otro" onclick="mostrarInfo('micro1')">Microbiología I</div>
     <div class="ramo otro" onclick="mostrarInfo('farmaco1')">Bases farmacológicas de la Medicina I</div>
-    <div class="ramo otro" onclick="mostrarInfo('patoSistemas')">Patología y fisiopatología de sistemas</div>
+    <div class="ramo otro" onclick="mostrarInfo('patologiaSist')">Patología y fisiopatología de sistemas</div>
   </div>
 
+  <!-- SEMESTRE 6 -->
   <div class="semestre">
     <h2>Semestre 6</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinicas1')">Clínicas Integradas I</div>
+    <div class="ramo clinica" onclick="mostrarInfo('clinica1')">Clínicas Integradas I</div>
     <div class="ramo otro" onclick="mostrarInfo('micro2')">Microbiología II</div>
     <div class="ramo otro" onclick="mostrarInfo('farmaco2')">Bases farmacológicas de la Medicina II</div>
-    <div class="ramo clinica" onclick="mostrarInfo('tallerClinico')">Taller clínico integrado</div>
+    <div class="ramo otro" onclick="mostrarInfo('tallerClinico')">Taller clínico integrado</div>
     <div class="ramo otro" onclick="mostrarInfo('fe')">Introducción a la fe</div>
   </div>
 
+  <!-- SEMESTRE 7 -->
   <div class="semestre">
     <h2>Semestre 7</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinicas2')">Clínicas Integradas II</div>
-    <div class="ramo otro" onclick="mostrarInfo('psicomed')">Psicología Médica</div>
-    <div class="ramo otro" onclick="mostrarInfo('saludPrev')">Salud Pública y Medicina Preventiva</div>
-    <div class="ramo otro" onclick="mostrarInfo('molmed')">Medicina Molecular</div>
+    <div class="ramo clinica" onclick="mostrarInfo('clinica2')">Clínicas Integradas II</div>
+    <div class="ramo otro" onclick="mostrarInfo('psicoMed')">Psicología Médica</div>
+    <div class="ramo otro" onclick="mostrarInfo('saludPublica')">Salud Pública y Medicina Preventiva</div>
+    <div class="ramo otro" onclick="mostrarInfo('medMol')">Medicina Molecular</div>
     <div class="ramo otro" onclick="mostrarInfo('eticaCristiana')">Ética Cristiana</div>
   </div>
 
+  <!-- SEMESTRE 8 -->
   <div class="semestre">
     <h2>Semestre 8</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinicas3')">Clínicas Integradas III</div>
+    <div class="ramo clinica" onclick="mostrarInfo('clinica3')">Clínicas Integradas III</div>
     <div class="ramo otro" onclick="mostrarInfo('psiquiatria')">Salud Mental y Psiquiatría</div>
-    <div class="ramo otro" onclick="mostrarInfo('eticaMedica')">Ética Médica</div>
+    <div class="ramo otro" onclick="mostrarInfo('eticaMed')">Ética Médica</div>
     <div class="ramo otro" onclick="mostrarInfo('cert1')">Certificación I</div>
   </div>
 
+  <!-- SEMESTRE 9 -->
   <div class="semestre">
     <h2>Semestre 9</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinicas4')">Clínicas Integradas IV</div>
-    <div class="ramo otro" onclick="mostrarInfo('gineco')">Obstetricia y Ginecología</div>
+    <div class="ramo clinica" onclick="mostrarInfo('clinica4')">Clínicas Integradas IV</div>
+    <div class="ramo otro" onclick="mostrarInfo('obstetricia')">Obstetricia y Ginecología</div>
     <div class="ramo otro" onclick="mostrarInfo('legal')">Medicina Legal</div>
     <div class="ramo otro" onclick="mostrarInfo('cert2')">Certificación II</div>
   </div>
 
+  <!-- SEMESTRE 10 -->
   <div class="semestre">
     <h2>Semestre 10</h2>
-    <div class="ramo clinica" onclick="mostrarInfo('clinicas5')">Clínicas Integradas V</div>
+    <div class="ramo clinica" onclick="mostrarInfo('clinica5')">Clínicas Integradas V</div>
     <div class="ramo otro" onclick="mostrarInfo('pediatria')">Pediatría y Cirugía Infantil</div>
-    <div class="ramo otro" onclick="mostrarInfo('hitoClinico')">Hito Evaluativo de Integración Clínica</div>
+    <div class="ramo otro" onclick="mostrarInfo('hitoClinica')">Hito evaluativo de integración clínica</div>
     <div class="ramo otro" onclick="mostrarInfo('cert3')">Certificación III</div>
   </div>
 
+  <!-- SEMESTRES 11 y 12 -->
   <div class="semestre">
     <h2>Semestres 11 y 12</h2>
     <div class="ramo internado" onclick="mostrarInfo('internadoMed')">Internado de Medicina Interna</div>
@@ -106,14 +123,17 @@
     <div class="ramo internado" onclick="mostrarInfo('internadoCirugia')">Internado de Cirugía</div>
   </div>
 
+  <!-- SEMESTRES 13 y 14 -->
   <div class="semestre">
     <h2>Semestres 13 y 14</h2>
-    <div class="ramo internado" onclick="mostrarInfo('internadoFam')">Internado de Salud Familiar</div>
+    <div class="ramo internado" onclick="mostrarInfo('internadoFamiliar')">Internado de Salud Familiar</div>
     <div class="ramo internado" onclick="mostrarInfo('internadoEsp')">Internado de Especialidades</div>
     <div class="ramo internado" onclick="mostrarInfo('internadoOpt')">Internado Optativo</div>
   </div>
 
-  <div id="info-ramos"></div>
+  <!-- Caja de info -->
+  <div id="info-ramos" class="info-box"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
