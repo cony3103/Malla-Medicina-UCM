@@ -118,11 +118,48 @@ footer {
   font-style: italic;
   user-select: none;
 }
-.ano {
+/* Contenedor horizontal de todos los años */
+.linea-tiempo {
   display: flex;
-  flex-direction: row; /* Hace que los semestres se acomoden horizontalmente */
-  gap: 40px;            /* Espacio entre cada semestre */
+  flex-direction: row;
+  gap: 60px;
+  overflow-x: auto;
+  padding: 30px 20px;
   align-items: flex-start;
-  overflow-x: auto;     /* Agrega scroll horizontal si no cabe todo en pantalla */
-  padding-bottom: 20px;
+}
+
+/* Grupo de 2 semestres por año */
+.grupo-ano {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 260px;
+  position: relative;
+}
+
+/* Etiqueta del año arriba del grupo */
+.etiqueta-ano {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b02a6f;
+  margin-bottom: 5px;
+  background-color: #ffd6ea;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(208, 72, 150, 0.2);
+  user-select: none;
+  text-align: center;
+}
+
+/* Semestre (una columna vertical con sus ramos) */
+.semestre {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px dashed #f3b3d3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 220px;
 }
