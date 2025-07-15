@@ -118,6 +118,14 @@ footer {
   font-style: italic;
   user-select: none;
 }
+.ano {
+  display: flex;
+  flex-direction: row; /* Muestra los semestres horizontalmente */
+  gap: 40px; /* Espacio entre columnas de semestres */
+  align-items: flex-start;
+  overflow-x: auto; /* Permite hacer scroll si no caben todos los semestres */
+  padding-bottom: 20px;
+}
 /* Contenedor horizontal de todos los años */
 .linea-tiempo {
   display: flex;
@@ -162,4 +170,14 @@ footer {
   flex-direction: column;
   gap: 10px;
   min-width: 220px;
+}
+.linea-tiempo::-webkit-scrollbar {
+  height: 10px;
+}
+.linea-tiempo::-webkit-scrollbar-thumb {
+  background-color: #d63384;
+  border-radius: 5px;
+}
+.linea-tiempo::-webkit-scrollbar-track {
+  background-color: #ffeef8;
 }
