@@ -118,3 +118,11 @@ footer {
   font-style: italic;
   user-select: none;
 }
+.ano {
+  display: flex;
+  flex-direction: row; /* Hace que los semestres se acomoden horizontalmente */
+  gap: 40px;            /* Espacio entre cada semestre */
+  align-items: flex-start;
+  overflow-x: auto;     /* Agrega scroll horizontal si no cabe todo en pantalla */
+  padding-bottom: 20px;
+}
